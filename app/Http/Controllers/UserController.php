@@ -9,6 +9,24 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function login_index()
+    {
+        if (Auth::check()) return redirect('/');
+        return view('layouts.login');
+    }
+    public function register_index()
+    {
+        if (Auth::check()) return redirect('/');
+        return view('layouts.register');
+    }
+    public function logout(Request $request)
+    {
+        if (!Auth::check()) return redirect('/');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }
     public function login(Request $request)
     {
         $data = $request->all();
