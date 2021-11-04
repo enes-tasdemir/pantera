@@ -1,4 +1,7 @@
 @extends('index')
+@section('styles')
+    <link rel="stylesheet" href="css/products.css">
+@endsection
 @section('title') Ürünlerimiz @endsection
 @section('content')
     <div class="main d-flex justify-content-center " style="min-height: calc(100% - 687px);">

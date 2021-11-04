@@ -12,6 +12,7 @@
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    @yield('styles')
     <script src="https://kit.fontawesome.com/441f292d9e.js" crossorigin="anonymous"></script>
 </head>
 <body class="vh-100">
@@ -102,6 +103,6 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-
+    @yield("scripts")
 </body>
 </html>
